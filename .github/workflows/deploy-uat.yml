@@ -1,0 +1,25 @@
+name: deploy-uat
+
+on:
+  push:
+    branches:
+      - deploy-uat
+    paths:
+      - README.md
+      - yarn.lock
+      - manifests/**
+      - src/**
+      - test/**
+      - ./*.json
+      - db/**
+      - yarn.lock
+      - Dockerfile
+      - .npmrc
+      - .github/workflows/deploy-uat.yml
+      - .github/workflows/job-pr-dev.yml
+      - ".github/containerscan/.trivyignores"
+
+jobs:
+  prdev:
+    uses: ./.github/workflows/job-pr-dev.yml
+    needs: deploy
