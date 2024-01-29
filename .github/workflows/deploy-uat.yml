@@ -19,6 +19,6 @@ on:
       - .github/workflows/job-pr-dev.yml
       - ".github/containerscan/.trivyignores"
 
-job:
+jobs:
   prdev:
     uses: ./.github/workflows/job-pr-dev.yml
