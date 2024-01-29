@@ -1,0 +1,15 @@
+name: Create Pull Requests to Dev
+
+on:
+  workflow_call:
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create a Pull Request to main (From UAT)
+        run: |
+          gh pr create --base main --head uat-deploy --title "merge back from UAT" --body "Merge back" || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
