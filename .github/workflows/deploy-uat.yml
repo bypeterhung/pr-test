@@ -22,4 +22,3 @@ on:
 jobs:
   prdev:
     uses: ./.github/workflows/job-pr-dev.yml
-    needs: deploy
