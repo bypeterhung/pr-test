@@ -3,7 +3,7 @@ name: deploy-uat
 on:
   push:
     branches:
-      - deploy-uat
+      - uat-deploy
     paths:
       - README.md
       - yarn.lock
