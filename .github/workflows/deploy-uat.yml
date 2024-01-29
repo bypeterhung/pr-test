@@ -5,6 +5,7 @@ on:
     branches:
       - deploy-uat
     paths:
+      - README.md
       - yarn.lock
       - manifests/**
       - src/**
